@@ -10,7 +10,7 @@ body {
   background-size: cover;
 }
 
-h1 {
+.h1 {
   color: #c1b9b9;
   font-family: DM SANS;
   font-size: 500%;
@@ -22,7 +22,7 @@ p {
   font-size: 100%;
 }
 
-div {
+.JADWAL {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,4 +71,48 @@ div {
   text-align: center;
   font-family: DM SANS;
   font-size: 200%;
+}
+.seragam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+table, th, td {
+  border:1px solid #7f7a7a;
+}
+.pik {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ppl {
+  color: white;
+  background-color: #3e3d3d;
+  border-radius: 16px 16px 16px 16px;
+  text-align: center;
+  font-family: DM SANS;
+}
+.hd {
+  color: white;
+  background-color: #a7a5a5;
+  border-radius: 16px 16px 16px 16px;
+}
+.pkt {
+  font-family: DM SANS;
+  text-align: center;
+  color: white;
+  background-color: #474747;
+  border-radius: 16px 16px 16px 16px;
+  height: 45px;
+  width: 100px;
+}
+.gmbrin {
+  height: 18px;
+  width: 18px;
+}
+.btnig {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
 }

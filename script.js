@@ -41,3 +41,21 @@ function JAWA() {
 function PPKN() {
     alert("PENGAJAR: Lusia Krisna Epi")
 }
+function INF() {
+    alert("PENGAJAR: BU Ardi")
+}
+function AP1() {
+    alert("Abu Abu Putih Lengan Panjang")
+}
+function BatikYK() {
+    alert("Batik Khas Yogyakarta, celana bawahan bewarna hitam berbahan kain(bukan jeans!)")
+}
+function BTS() {
+    alert("Batik Sekolah, celana bawahan bewarna hitam berbahan kain(bukan jeans!)")
+}
+function AP2() {
+    alert("Abu Abu Putih Lengan Pendek")
+}
+function PRM() {
+    alert("Pramuka Lengkap")
+}
