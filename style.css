@@ -117,5 +117,5 @@ table, th, td {
   border: 2px solid #555555;
 }
 .video {
-  align-items: center;
+  align-content: center;
 }
