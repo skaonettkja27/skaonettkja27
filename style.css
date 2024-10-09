@@ -147,3 +147,9 @@ ul li ul.dropdown {
   z-index: 999;
   display: none;
 }
+ul li a:hover {
+  background: #112c66;
+}
+ul li:hover ul.dropdown {
+  display: block;
+}
