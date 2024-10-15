@@ -163,12 +163,6 @@ table, th, td {
   border-radius: 10px;
   cursor: pointer;
 }
-.h3 {
-  color: #ffffff;
-  font-family: ARIAL;
-  font-size: 800%;
-  text-align:center;
-}
 .container {
   max-width: 800px; /* Atur lebar maksimum container */
   margin: 0 auto; /* Membuat container berada di tengah halaman */
@@ -176,11 +170,13 @@ table, th, td {
 }
 .image-right {
   float: right; 
-  width: 200px; 
+  width: 40px; 
 }
-
 .content {
   border-left: 2px solid black;
   border-right: 2px solid black;
   padding: 20px;
+  color: #ffffff;
+  font-family: ARIAL;
+  font-size: 200%;
 }
