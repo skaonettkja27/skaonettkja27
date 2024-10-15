@@ -170,8 +170,8 @@ table, th, td {
 }
 .image-right {
   float: right; 
-  max-width: 100px; /* Atur lebar maksimum sesuai keinginan */
-  max-height: 100px; /* Atur tinggi maksimum sesuai keinginan */
+  max-width: 500px; /* Atur lebar maksimum sesuai keinginan */
+  max-height: 500px; /* Atur tinggi maksimum sesuai keinginan */
 }
 
 .content {
