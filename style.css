@@ -160,6 +160,6 @@ table, th, td {
   background-color: #b4765d; 
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
