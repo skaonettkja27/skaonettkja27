@@ -170,7 +170,10 @@ table, th, td {
 }
 .image-right {
   float: right; 
-  width: 40px; 
+  img {
+    max-width: 80px; /* Atur lebar maksimum sesuai keinginan */
+    max-height: 80px; /* Atur tinggi maksimum sesuai keinginan */
+}
 }
 .content {
   border-left: 2px solid black;
@@ -178,5 +181,5 @@ table, th, td {
   padding: 20px;
   color: #ffffff;
   font-family: ARIAL;
-  font-size: 200%;
+  font-size: 60%;
 }
