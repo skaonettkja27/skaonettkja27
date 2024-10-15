@@ -175,10 +175,8 @@ table, th, td {
 }
 
 .content {
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  padding: 20px;
-  color: #ffffff;
-  font-family: ARIAL;
-  font-size: 200%;
+  font-family: Arial, sans-serif; /* Font yang sering digunakan di Wikipedia */
+  font-size: 16px; /* Ukuran font standar */
+  line-height: 1.5; /* Jarak antar baris */
+  color: #f9f9f9 /* Warna teks abu-abu gelap */
 }
