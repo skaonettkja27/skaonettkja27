@@ -149,3 +149,17 @@ table, th, td {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.button-container {
+  text-align: center; 
+}
+
+.btnt {
+  display: block; 
+  margin: 10px auto; 
+  padding: 15px 30px;
+  background-color: #cf430b; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
