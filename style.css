@@ -178,3 +178,29 @@ table, th, td {
   font-family: Arial, sans-serif;
   font-size: 16px
 }
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right:   
+ 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+}
