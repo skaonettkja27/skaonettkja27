@@ -1,187 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>TKJX WEBSITE</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <title>Halaman Utama Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header>
+    <h1>X TKJ A</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Jadwal Kelas</a></li>
+        <li><a href="#">Tugas P5</a></li>
+        <li><a href="#">Medsos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="dropdown">
-    <button class="dropbtn">Pilih</button>
-    <div class="dropdown-content">
-      <a href="tugas.html">TUGAS P5</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div>
+  <main>
+    <h2>Selamat Datang di Website Kami</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </main>
 
-  <h1 class="h1">SKAONET X TKJ A WEB
-  </h1>
-  <h3 class="pemisah">JADWAL KELAS 10 X TKJ A</h3>
+  <footer>
+    <p>&copy; 2024 X TKJ A</p>
+  </footer>
+
   <script src="script.js"></script>
-  <hr>
-  <div class="JADWAL">
-    <table class="tabler">
-      <tbody>
-        <tr>
-          <th class= "Hari">HARI</th>
-          <th class= "tg">1</th>
-          <th class= "tg">2</th>
-          <th class= "tg">3</th>
-          <th class= "tg">4</th>
-          <th class= "tg">5</th>
-          <th class= "tg">6</th>
-          <th class= "tg">7</th>
-          <th class= "tg">8</th>
-          <th class= "tg">9</th>
-          <th class= "tg">10</th>
-          <th class= "tg">11</th>
-        </tr>
-        <tr>
-          <th class= "h">SENIN</th>
-          <th class="ks">UPACARA</th>
-          <th class="ks" colspan="2"><button class="btn" onclick="BIND()">B INDONESIA</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="BING()">B INGGRIS</button></th>
-          <th class="ks" colspan="3"><button class="btn" onclick="IPAS()">IPAS</button></th>
-          <th class="ks" colspan="3"><button class="btn" onclick="PAB()">PAB</button></th>
-        </tr>
-          <th class= "h">SElASA</th>
-          <th class="ks" colspan="6"><button class="btn" onclick="DP1()">DPK</button></th>
-          <th class="ks" colspan="1"><button class="btn" onclick="BK()">BK</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="MTK()">MATEMATIKA</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="SI()">SEJARAH</button></th>
-        </tr>
-          <th class= "h">RABU</th>
-          <th class="ks" colspan="6"><button class="btn" onclick="DP2()">DPK</button></th>
-          <th class="ks" colspan="1"><button class="btn" onclick="BK()">BK</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="JAWA()">B JAWA</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="BING()">B INGGRIS</button></th>
-        </tr>
-        <tr>
-          <th class= "h">KAMIS</th>
-          <th class="ks" colspan="3"><button class="btn" onclick="PJOK()">PJOK</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="SB()">SENI BUDAYA</button></th>
-          <th class="ks" colspan="3"><button class="btn" onclick="IPAS()">IPAS</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="MTK()">MATEMATIKA</button></th>
-          <th class="ks"></th>
-        </tr>
-        <tr>
-          <th class= "h">JUMAT</th>
-          <th class="ks"></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="PPKN()">PPKN</button></th>
-          <th class="ks" colspan="2"><button class="btn" onclick="BIND()">B INDONESIA</button></th>
-          <th class="ks" colspan="4"><button class="btn" onclick="INF()">INFORMATIKA</button></th>
-          <th class="ks" colspan="2">PRAMUKA</th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <hr>
-  <div class="seragam">
-    <table class="tabler">
-      <tbody>
-        <tr>
-          <th class="Hari">HARI</th>
-          <th class= "h">SENIN</th>
-          <th class= "h">SELASA</th>
-          <th class= "h">RABU</th>
-          <th class= "h">KAMIS</th>
-          <th class= "h">JUMAT</th>
-        </tr>
-        <tr>
-          <th class= "Hari">SERAGAM</th>
-          <th class="ks" colspan="1"><button class="btn" onclick="AP1()">Abu Putih</button></th>
-          <th class="ks" colspan="1"><button class="btn" onclick="BatikYK()">Batik Khas YK</button></th>
-          <th class="ks" colspan="1"><button class="btn" onclick="BTS()">Batik Sekolah</button></th>
-          <th class="ks" colspan="1"><button class="btn" onclick="AP2()">Abu Putih</button></th>
-          <th class="ks" colspan="6"><button class="btn" onclick="PRM()">Pramuka</button></th>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <hr>
-  <div class="piket">
-    <table class="pik">
-      <tr>
-        <th class= "hd" colspan="5">Piket Kelas</th>
-      </tr>
-      <tr>
-        <td class="pkt">SENIN</td>
-        <td class="pkt">SELASA</td>
-        <td class="pkt">RABU</td>
-        <td class="pkt">KAMIS</td>
-        <td class="pkt">JUMAT</td>
-      </tr>
-      <tr>
-        <td class="ppl">DINAR</td>
-        <td class="ppl">RAFID</td>
-        <td class="ppl">ZULFI</td>
-        <td class="ppl">WAHId </td>
-        <td class="ppl">AYESHA</td>
-      </tr>
-      <tr>
-        <td class="ppl">ANDREAS</td>
-        <td class="ppl">FATIR</td>
-        <td class="ppl">RADIT</td>
-        <td class="ppl">LINTANG</td>
-        <td class="ppl">TIO</td>
-      </tr>
-      <tr>
-        <td class="ppl">RESTU</td>
-        <td class="ppl">ARIF</td>
-        <td class="ppl">RENOF</td>
-        <td class="ppl">ARFINSA</td>
-        <td class="ppl">DAFA H</td>
-      </tr>
-      <tr>
-        <td class="ppl">ABRIN</td>
-        <td class="ppl">ADNAN</td>
-        <td class="ppl">JOKO</td>
-        <td class="ppl">ADIT</td>
-        <td class="ppl">ALFIN</td>
-      </tr>
-      <tr>
-        <td class="ppl">RIDWAN</td>
-        <td class="ppl">NOVAN</td>
-        <td class="ppl">BRIAN</td>
-        <td class="ppl">NAUFAL</td>
-        <td class="ppl">ANWAR</td>
-      </tr>
-      <tr>
-        <td class="ppl">GABRIEL</td>
-        <td class="ppl">PANJI</td>
-        <td class="ppl">RISLA</td>
-        <td class="ppl">DAFA A</td>
-        <td class="ppl">EVAN</td>
-      </tr>
-      <tr>
-        <td class="ppl">ATIQAH</td>
-        <td class="ppl">NIKO</td>
-        <td class="ppl">LALA</td>
-        <td class="ppl">NIKEN</td>
-        <td class="ppl">ALIFAH</td>
-      </tr>
-      <tr>
-        <td class="ppl"></td>
-        <td class="ppl"></td>
-        <td class="ppl"></td>
-        <td class="ppl">BAGUS</td>
-        <td class="ppl"></td>
-      </tr>
-    </table>
-  </div>
-  <center>
-    <video width="320" height="240" controls>
-    <source src="matts.mp4" type="video/mp4">
-    <source src="matts.ogg" type="video/ogg">
-    Your browser does not support HTML video.
-  </video>
-  </center>
-  <a href="https://www.instagram.com/sknettkjaa?igsh=MTJ3NWFlZXc4dHczbw==" target="_blank"><button type="button" class="btnig"><img src="instagram.svg" class="gmbrin">IG KELAS</button></a>
 </body>
 </html>
