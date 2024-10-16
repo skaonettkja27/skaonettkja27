@@ -27,6 +27,7 @@ body {
   display: flex;
   flex-direction: row;
   text-transform: capitalize;
+  justify-content: center;
 }
 .firstname {
   color: white;
