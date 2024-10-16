@@ -34,3 +34,13 @@
   font-weight: 400;
   padding-left: 4px;
 }
+.navi>li {
+  list-style-type: none;
+  padding: 15px;
+}
+.navi > li > a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
