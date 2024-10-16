@@ -38,7 +38,7 @@ body {
   font-weight: 400;
   padding-left: 4px;
 }
-navi {
+.navi {
   display: flex;
   justify-content: center;
   align-items: center;
