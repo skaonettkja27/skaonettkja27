@@ -95,20 +95,5 @@ body {
     background-color: #222;
     padding: 20px;
     text-align: center;
+    color: white;
 }
-
-.footer>nav>ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.footer>nav>li {
-    margin: 0 10px;
-}
-
-.footer>nav>a {
-    text-decoration: none;
-    color: #333;
-}
-
