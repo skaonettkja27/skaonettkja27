@@ -10,9 +10,8 @@ html {
 .container {
   max-width: 500px;
   margin: 0 auto;
-  background: red;
+  background: lightslategrey;
   height: 100vh;
-  background-image: url("bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
