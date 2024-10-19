@@ -12,7 +12,7 @@ html {
   margin: 0 auto;
   background: red;
   height: 100vh;
-  background-image: url("background.jpg");
+  background-image: url("bg.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -64,7 +64,7 @@ html {
 }
 
 .link>a:hover {
-  background-color: azure;
+  background-color: crimson;
 }
 
 .footer {
