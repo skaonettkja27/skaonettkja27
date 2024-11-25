@@ -217,7 +217,7 @@ section#gallery div img:hover {
   transform: scale(1.1);
 }
 section.quote {
-  background: url("asset/background-bromo.jpg") no-repeat;
+  background: url("asset/foto.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
