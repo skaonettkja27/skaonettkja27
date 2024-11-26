@@ -11,13 +11,6 @@ function klikMenu() {
     });
 }
 
-$(document).ready(function () {
-    var width = $(window).width();
-    if (width < 990) {
-        klikMenu();
-    }
-})
-
 //check lebar
 $(window).resize(function () {
     var width = $(window).width();

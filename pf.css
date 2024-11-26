@@ -287,6 +287,23 @@ footer .layar-dalam h5 {
   font-size: 20px;
   font-weight: bold;
 }
+footer .layar-dalam .contac a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+    display: inline-block; /* Membuat elemen menjadi blok yang bisa diatur ukurannya */
+    padding: 10px 20px; /* Memberikan padding pada tombol */
+    background-color: #fff; /* Warna latar belakang putih */
+    border: 1px solid #ddd; /* Membuat border */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    transition: all 0.3s ease-in-out; /* Membuat efek transisi saat dihover */
+}
+footer .layar-dalam .contac a:hover {
+  background-color: #e6e6e6;
+}
+footer .layar-dalam .contac img {
+  width: 20px; /* Mengatur lebar gambar */
+  height: 20px; /* Mengatur tinggi gambar */
+  vertical-align: middle;
+}
 footer .layar-dalam .copyright {
   width: 100%;
   margin-top: 30px;
