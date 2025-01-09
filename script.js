@@ -59,3 +59,6 @@ function AP2() {
 function PRM() {
     alert("Pramuka Lengkap")
 }
+function PR() {
+    alert("PRAMUKA BERSAMA MAS - MAS DAN MBAK - MBAK DEWAN AMBALAN DAN KAKAK PEMBINA")
+}
