@@ -65,3 +65,6 @@ function PR() {
 function PULANG() {
     alert("Waktu Pulang")
 }
+function INF2() {
+    alert("BU HILMI")
+}
