@@ -62,3 +62,6 @@ function PRM() {
 function PR() {
     alert("PRAMUKA BERSAMA MAS - MAS DAN MBAK - MBAK DEWAN AMBALAN DAN KAKAK PEMBINA")
 }
+function PULANG() {
+    alert("Waktu Pulang")
+}
