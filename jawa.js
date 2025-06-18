@@ -39,3 +39,13 @@ $(document).ready(function () {
         }
     })
 });
+$(document).ready(function() {
+ $('.menu ul li a').click(function() {
+ $('.menu ul li a').removeClass('active');
+ $(this).addClass('active');
+
+ // Untuk menu mobile, tutup setelah klik
+ $('.tombol-menu').removeClass('active');
+ $('.menu ul').removeClass('active');
+ });
+});

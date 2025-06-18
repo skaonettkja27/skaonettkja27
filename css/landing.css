@@ -1,0 +1,636 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6; /* Ditingkatkan agar lebih mudah dibaca */
+  font-size: 16px; /* Ukuran font sedikit ditingkatkan */
+}
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #333; /* Warna teks default */
+}
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+  padding: 0 15px; /* Menambahkan padding untuk layar yang lebih kecil */
+}
+.layar-penuh {
+  width: 100%;
+}
+nav {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Border yang lebih lembut */
+  line-height: 60px;
+  width: 100%;
+  transition: background-color 0.5s ease, border-bottom 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Bayangan halus */
+}
+nav.putih {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+nav .logo {
+  float: left;
+  position: relative;
+  line-height: 55px;
+  text-align: center;
+}
+nav .logo img {
+  vertical-align: middle;
+  width: 120px;
+}
+
+nav .menu {
+  float: right;
+  height: 60px;
+  max-width: 600px;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  float: left;
+  line-height: 60px;
+}
+
+nav .menu ul li a {
+ color: #fff;
+ text-align: center;
+ padding: 10px 18px; /* Sesuaikan padding */
+ text-decoration: none;
+ position: relative;
+ overflow: hidden;
+ display: block; /* Membuat tautan menjadi blok */
+ margin: 5px 0; /* Tambahkan margin atas dan bawah untuk jarak */
+ border-radius: 5px; /* Tambahkan sedikit radius untuk tampilan tombol */
+ transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk efek hover dan aktif */
+}
+
+nav .menu ul li a.active,
+nav .menu ul li a:hover {
+ background-color: #c86b85; /* Warna latar belakang tombol aktif/hover */
+ color: #fff; /* Warna teks tombol aktif/hover */
+}
+
+nav.putih .menu ul li a {
+ color: #333;
+}
+
+nav.putih .menu ul li a.active,
+nav.putih .menu ul li a:hover {
+ background-color: #c86b85;
+ color: #fff;
+}
+
+/* Hapus efek garis bawah karena sekarang seperti tombol */
+nav ul li a.animated-underline::before {
+ content: '';
+ width: 0;
+ height: 0;
+}
+
+/* Efek Garis Bawah Bergerak */
+nav ul li a.animated-underline::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c86b85;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+nav ul li a.animated-underline:hover::before {
+  transform: translateX(0%);
+}
+
+nav.putih ul li a {
+  color: #333;
+}
+nav.putih ul li a.animated-underline::before {
+  background-color: #c86b85;
+}
+
+
+/* pengaturan header */
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  display: flex; /* Menggunakan flexbox untuk pemusatan */
+  align-items: center; /* Memusatkan konten secara vertikal */
+  justify-content: center; /* Memusatkan konten secara horizontal */
+}
+header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Memastikan video menutupi lebar penuh */
+  height: 100%; /* Memastikan video menutupi tinggi penuh */
+  object-fit: cover;
+  z-index: -2;
+}
+header .intro {
+  z-index: 100;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 20px; /* Menambahkan padding */
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay yang sedikit lebih gelap agar teks mudah dibaca */
+  border-radius: 10px;
+}
+header .intro h3 {
+  font-size: 60px; /* Ukuran judul lebih besar */
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Bayangan teks agar lebih mudah terlihat */
+}
+header .intro p {
+    font-size: 22px; /* Ukuran teks paragraf lebih besar */
+    margin-top: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+.tombol {
+  background-color: #c86b85;
+  height: 45px; /* Tombol sedikit lebih tinggi */
+  line-height: 45px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0px 25px; /* Padding lebih banyak */
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transisi halus */
+  margin-top: 20px;
+}
+.tombol:hover {
+  background-color: #b35f75; /* Lebih gelap saat hover */
+  transform: translateY(-2px); /* Efek mengangkat sedikit */
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5; /* Opasitas sedikit ditingkatkan */
+  z-index: -1;
+}
+.tombol-menu {
+  position: absolute;
+  top: 1.7rem;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  display: none; /* Sembunyikan secara default untuk layar besar */
+}
+.tombol-menu .garis {
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+section {
+  padding: 80px 0px; /* Padding vertikal ditingkatkan */
+}
+section h3 {
+  font-size: 38px; /* Ukuran judul bagian lebih besar */
+  margin-bottom: 20px;
+  color: #444; /* Warna judul lebih gelap */
+}
+section h3::after {
+  content: "";
+  border-bottom: 6px solid #c86b85; /* Garis bawah yang lebih tebal dan menonjol */
+  width: 60px; /* Garis bawah lebih lebar */
+  display: block;
+  margin: 20px auto 40px auto; /* Spasi lebih banyak */
+}
+#aboutus,
+#team,
+#blog,
+#services { /* Ditambahkan layanan di sini */
+  text-align: center;
+}
+section p.ringkasan {
+  font-style: normal; /* Berubah dari miring */
+  font-size: 20px; /* Ukuran teks ringkasan lebih besar */
+  color: #666; /* Warna lebih lembut */
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .konten-isi p {
+  font-style: normal;
+  line-height: 1.8; /* Tinggi baris ditingkatkan */
+  color: #555;
+  text-align: left; /* Teks tubuh rata kiri */
+  max-width: 800px;
+  margin: 0 auto;
+}
+nav.putih {
+  background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+  background-color: #333;
+}
+nav.putih ul li a {
+  color: #333;
+}
+nav .logo img.hitam {
+  display: none;
+}
+nav.putih .logo img.putih {
+  display: none;
+}
+nav.putih .logo img.hitam {
+  display: inline-block;
+}
+
+section.abuabu {
+  background-color: #f8f9fa; /* Abu-abu lebih terang */
+}
+.support, /* Diganti nama menjadi services di HTML, tetapi tetap untuk kompatibilitas CSS */
+.tim,
+.blog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Memungkinkan wrapping pada layar yang lebih kecil */
+}
+.support h6,
+.tim h6 {
+  margin: 0px;
+  margin-top: 25px; /* Spasi lebih banyak */
+  padding: 0px;
+  font-size: 22px; /* Ukuran judul lebih besar */
+  font-weight: bold;
+  color: #444;
+}
+.support img {
+  width: 60px; /* Ikon lebih besar */
+  margin-bottom: 15px;
+}
+.support div,
+.tim div {
+  text-align: center;
+  width: 30%; /* Lebar disesuaikan untuk spasi yang lebih baik */
+  padding: 30px; /* Menambahkan padding */
+  box-sizing: border-box; /* Menyertakan padding dalam lebar */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Spasi antar baris saat wrap */
+}
+.support div:hover {
+    transform: translateY(-5px); /* Efek mengangkat saat hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.support p {
+    color: #666;
+    font-size: 15px;
+}
+section#gallery {
+  display: grid; /* Menggunakan grid untuk tata letak yang lebih fleksibel */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Grid responsif */
+  gap: 15px; /* Jarak antar gambar */
+  overflow: hidden;
+  padding: 30px 0; /* Padding disesuaikan */
+}
+section#gallery div {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section#gallery div img {
+  width: 100%; /* Membuat gambar mengisi area gridnya */
+  height: 200px; /* Tinggi tetap untuk konsistensi */
+  object-fit: cover; /* Menutupi area, memotong jika perlu */
+  border-radius: 8px; /* Sudut sedikit lebih membulat */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Bayangan halus */
+  transition: all 0.3s ease-in-out;
+}
+section#gallery div img:hover {
+  transform: scale(1.05); /* Zoom yang sedikit lebih besar */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+section.quote {
+  background: url("/asset/foto.jpg") no-repeat center center / cover; /* Shorthand untuk properti latar belakang */
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  font-size: 28px; /* Ukuran teks kutipan lebih besar */
+  font-style: italic;
+  padding: 120px 20px; /* Padding lebih banyak */
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6); /* Bayangan teks lebih menonjol */
+  position: relative;
+}
+section.quote::before { /* Overlay agar teks lebih mudah dibaca */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+section.quote .layar-dalam {
+  position: relative;
+  z-index: 2; /* Membawa konten ke depan */
+}
+section.quote .layar-dalam p {
+  display: inline;
+  background: url("asset/quote-icon.png") no-repeat left top; /* Menyesuaikan posisi ikon */
+  background-size: 30px; /* Ukuran ikon kutipan */
+  padding-left: 45px; /* Ruang untuk ikon */
+}
+.tim img {
+  width: 150px; /* Lebar tetap untuk gambar profil */
+  height: 150px; /* Tinggi tetap */
+  object-fit: cover; /* Memastikan gambar mengisi ruang tanpa distorsi */
+  border-radius: 50%; /* Gambar melingkar */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2); /* Bayangan lebih lembut */
+  margin-bottom: 15px;
+}
+.tim span {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+    font-style: italic;
+}
+.tim p {
+    font-size: 15px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.blog .area {
+  width: 48%; /* Lebar disesuaikan untuk dua kolom dengan jarak */
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.1); /* Bayangan lebih lembut, lebih modern */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden; /* Memastikan sudut membulat berfungsi */
+  margin-bottom: 30px; /* Spasi antar postingan blog */
+  background-color: #fff;
+}
+.blog div.area div {
+  width: 50%;
+}
+.blog .area .gambar {
+  border-radius: 8px 0px 0px 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px; /* Tinggi disesuaikan untuk konsistensi */
+}
+.blog .area .text article {
+  padding: 30px; /* Padding disesuaikan */
+}
+.blog .area .text article h4 {
+  margin: 0px;
+  font-size: 22px; /* Ukuran judul blog lebih besar */
+  margin-bottom: 10px;
+}
+.blog .area .text article a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.blog .area .text article a:hover {
+  color: #c86b85; /* Sorot saat hover */
+}
+.blog .area .text article p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+footer {
+  padding: 60px 0px; /* Padding ditingkatkan */
+  background-color: #2c3e50; /* Latar belakang footer lebih gelap */
+  color: #ecf0f1; /* Warna teks lebih terang */
+}
+footer .layar-dalam {
+  display: grid; /* Menggunakan grid untuk tata letak footer */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Kolom responsif */
+  gap: 30px; /* Jarak antar bagian footer */
+  text-align: center; /* Memusatkan konten footer */
+}
+footer .layar-dalam div {
+  width: auto; /* Biarkan grid menangani lebar */
+}
+footer .layar-dalam h5 {
+  margin-top: 0px;
+  font-size: 24px; /* Ukuran judul footer lebih besar */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+footer .layar-dalam .contact a.social-icon {
+  display: inline-block;
+  background-color: #34495e; /* Latar belakang ikon sosial lebih gelap */
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 8px; /* Jarak antar ikon */
+  font-size: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+footer .layar-dalam .contact a.social-icon:hover {
+  background-color: #c86b85; /* Merah muda saat hover */
+  transform: translateY(-3px);
+}
+footer .layar-dalam .copyright {
+  grid-column: 1 / -1; /* Membentang di semua kolom */
+  width: 100%;
+  margin-top: 40px; /* Spasi lebih banyak */
+  padding-top: 30px;
+  border-top: 1px solid #4a667b; /* Border lebih terang */
+  text-align: center;
+  font-size: 14px;
+  color: #bdc3c7; /* Warna lebih lembut untuk hak cipta */
+}
+
+/* Desain Responsif */
+@media screen and (max-width: 991.98px) {
+  .layar-dalam {
+    width: 90%;
+  }
+  nav .menu ul {
+    display: none;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Latar belakang putih untuk menu seluler */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 10px;
+  }
+  nav .menu ul.active { /* Kelas yang ditambahkan oleh JS untuk menampilkan menu */
+    display: block;
+  }
+  nav .menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #eee; /* Border lebih terang */
+    line-height: 45px; /* Tinggi baris disesuaikan */
+    text-align: left; /* Rata kiri item menu */
+  }
+  nav .menu ul li:last-child {
+      border-bottom: none;
+  }
+  nav .menu ul li a {
+    color: #333;
+    padding-left: 20px; /* Indent item menu */
+  }
+  nav .menu ul li a.animated-underline::before {
+    background-color: #c86b85;
+  }
+  .tombol-menu {
+    display: flex; /* Tampilkan menu hamburger */
+  }
+  nav.putih .logo img.putih {
+    display: inline-block;
+  }
+  nav.putih .logo img.hitam {
+    display: none;
+  }
+  header .intro h3 {
+    font-size: 40px; /* Sesuaikan ukuran font header untuk seluler */
+  }
+  header .intro p {
+    font-size: 18px;
+  }
+  section h3 {
+    font-size: 32px;
+  }
+  section p.ringkasan {
+    font-size: 17px;
+  }
+  .blog .area {
+    flex-direction: column; /* Tumpuk item blog secara vertikal */
+    width: 90%; /* Sesuaikan lebar untuk satu kolom */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog div.area div {
+    width: 100%;
+  }
+  .blog .area .gambar {
+    border-radius: 8px 8px 0px 0px;
+    height: 200px;
+  }
+  .support {
+    flex-direction: column; /* Tumpuk item dukungan secara vertikal */
+    align-items: center;
+  }
+  .support div {
+    width: 80%; /* Sesuaikan lebar untuk satu kolom */
+    margin-bottom: 25px; /* Spasi antar item */
+  }
+  .tim {
+    flex-direction: column; /* Tumpuk item tim secara vertikal */
+    align-items: center;
+  }
+  .tim div {
+    width: 80%; /* Sesuaikan lebar untuk satu kolom */
+    margin-bottom: 30px;
+  }
+  section#gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Item grid lebih kecil untuk seluler */
+    gap: 10px;
+  }
+  section#gallery div img {
+    height: 150px;
+  }
+  section.quote {
+    font-size: 20px;
+    padding: 80px 15px;
+  }
+  footer .layar-dalam {
+    grid-template-columns: 1fr; /* Satu kolom untuk footer di seluler */
+    text-align: center;
+  }
+  footer .layar-dalam div {
+      margin-bottom: 20px;
+  }
+  footer .layar-dalam .contact a.social-icon {
+      margin: 0 10px;
+  }
+  footer .layar-dalam .copyright {
+      margin-top: 20px;
+      padding-top: 20px;
+  }
+}
+footer .layar-dalam .contact ul.social-links {
+ list-style: none;
+ padding: 0;
+ margin: 10px 0;
+}
+
+footer .layar-dalam .contact ul.social-links li {
+ margin-bottom: 8px;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button {
+ display: flex;
+ align-items: center;
+ color: #ecf0f1;
+ text-decoration: none;
+ transition: color 0.3s ease;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button:hover {
+ color: #c86b85;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button i {
+ background-color: #34495e;
+ color: #fff;
+ width: 35px;
+ height: 35px;
+ line-height: 35px;
+ border-radius: 50%;
+ text-align: center;
+ margin-right: 10px;
+ font-size: 18px;
+ display: inline-block;
+}
+
+
+footer .layar-dalam .contact ul.social-links li a.social-button:hover i {
+ background-color: #c86b85;
+}
+
+/* Pastikan JS dapat mengganti logo yang benar berdasarkan posisi gulir */
+nav .logo img.putih { display: block; }
+nav .logo img.hitam { display: none; }
+
+nav.putih .logo img.putih { display: none; }
+nav.putih .logo img.hitam { display: block; }
