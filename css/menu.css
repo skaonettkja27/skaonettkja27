@@ -1,0 +1,369 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Main Navigation Bar */
+.main-nav {
+    background-color: #34495e; /* Warna latar belakang navbar */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Tambah transisi untuk perubahan warna saat scroll */
+}
+
+/* Tambahkan kelas ini untuk navbar saat menggulir */
+.main-nav.scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* Warna putih transparan saat digulir */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.nav-brand a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease; /* Tambah transisi untuk perubahan warna teks */
+}
+/* Warna teks brand saat digulir */
+.main-nav.scrolled .nav-brand a {
+    color: #333;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Sesuaikan gap untuk memberikan lebih banyak ruang */
+    gap: 35px; /* Ditingkatkan dari 25px untuk jarak lebih baik */
+    margin-right: 100px; /* Tambah margin kanan agar tidak terlalu mepet */
+}
+
+.nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #c86b85; /* Warna highlight */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #c86b85; /* Warna teks saat hover */
+}
+/* Warna teks nav-link saat digulir */
+.main-nav.scrolled .nav-link {
+    color: #333; /* Teks navbar berwarna gelap saat navbar terang */
+}
+.main-nav.scrolled .nav-link:hover {
+    color: #c86b85; /* Warna highlight tetap */
+}
+
+
+/* Menu Toggle for Mobile */
+.menu-toggle {
+    display: none; /* Sembunyikan secara default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.icon-bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ecf0f1;
+    margin: 6px 0;
+    transition: all 0.3s ease-in-out;
+}
+/* Warna icon-bar saat digulir */
+.main-nav.scrolled .icon-bar {
+    background-color: #333;
+}
+
+/* Hamburger animation */
+.menu-toggle.active .icon-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .icon-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Tampilkan hamburger di mobile */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Sesuaikan dengan tinggi navbar */
+        left: 0;
+        width: 100%;
+        background-color: #34495e;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        max-height: 0; /* Sembunyikan menu secara default */
+        overflow: hidden;
+        transition: max-height 0.4s ease-out; /* Animasi buka/tutup */
+    }
+    /* Warna latar belakang menu mobile saat navbar digulir */
+    .main-nav.scrolled .nav-menu {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .main-nav.scrolled .nav-menu li a {
+        color: #333; /* Warna teks menu mobile saat navbar terang */
+    }
+    .main-nav.scrolled .nav-menu li a:hover {
+        color: #c86b85;
+    }
+
+
+    .nav-menu.active {
+        max-height: 300px; /* Tinggi maksimal saat menu terbuka (sesuaikan) */
+    }
+
+    .nav-menu li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .main-nav.scrolled .nav-menu li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 15px 0;
+    }
+}
+
+/* --- Gaya Bagian Berita (yang sudah ada) --- */
+.news-section-container {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    padding-top: 100px; /* Tambahkan padding atas agar tidak tertutup navbar */
+}
+
+.news-section-container .section-header h3 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.news-section-container .section-header h3::after {
+    content: "";
+    border-bottom: 6px solid #c86b85;
+    width: 60px;
+    display: block;
+    margin: 20px auto 40px auto;
+}
+
+.news-section-container .section-header p.ringkasan {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px; /* Lebar maksimal grid berita */
+    margin: 0 auto;
+}
+
+.news-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px; /* Tinggi gambar card */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #eee;
+}
+
+.news-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-intro {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.news-title {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #444;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.news-card:hover .news-title {
+    color: #c86b85; /* Warna judul berubah saat card di-hover */
+}
+
+/* Responsif untuk card berita di news-grid */
+@media screen and (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr; /* Satu kolom di layar kecil */
+        padding: 0 20px;
+    }
+}
+
+/* --- Gaya Footer (DITAMBAHKAN) --- */
+footer {
+  padding: 60px 0px; /* Increased padding */
+  background-color: #2c3e50; /* Darker footer background */
+  color: #ecf0f1; /* Lighter text color */
+}
+footer .layar-dalam {
+  display: grid; /* Use grid for footer layout */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 30px; /* Gap between footer sections */
+  text-align: center; /* Center footer content */
+}
+footer .layar-dalam div {
+  width: auto; /* Let grid handle width */
+}
+footer .layar-dalam h5 {
+  margin-top: 0px;
+  font-size: 24px; /* Larger footer headings */
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+footer .layar-dalam .contact ul.social-links { /* Gaya untuk daftar link sosial di footer */
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+footer .layar-dalam .contact ul.social-links li {
+  margin-bottom: 8px;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button {
+  display: flex; /* Menggunakan flexbox untuk logo dan teks sejajar */
+  align-items: center; /* Pusatkan vertikal */
+  justify-content: center; /* Pusatkan horizontal di item footer */
+  color: #ecf0f1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button:hover {
+  color: #c86b85;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button i {
+  background-color: #34495e;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px; /* Jarak antara ikon dan teks */
+  font-size: 18px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+footer .layar-dalam .contact ul.social-links li a.social-button:hover i {
+  background-color: #c86b85;
+}
+footer .layar-dalam .copyright {
+  grid-column: 1 / -1; /* Span across all columns */
+  width: 100%;
+  margin-top: 40px; /* More spacing */
+  padding-top: 30px;
+  border-top: 1px solid #4a667b; /* Lighter border */
+  text-align: center;
+  font-size: 14px;
+  color: #bdc3c7; /* Softer color for copyright */
+}
+
+/* Responsive Design untuk Footer */
+@media screen and (max-width: 768px) {
+    footer .layar-dalam {
+        grid-template-columns: 1fr; /* Single column for footer on mobile */
+        text-align: center;
+    }
+    footer .layar-dalam div {
+        margin-bottom: 20px;
+    }
+    footer .layar-dalam .contact ul.social-links li a.social-button {
+        justify-content: center; /* Pusatkan tombol sosial di mobile */
+    }
+    footer .layar-dalam .copyright {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+}
